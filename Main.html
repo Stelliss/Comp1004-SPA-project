@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Weight Tracker SPA</title>
+
+    <link rel="stylesheet" href="Main.css"/>
+</head>
+<body>
+    <div id="sidebar">
+        <button class="button" id="bodyWeightNav">Body Weight</button>
+        <br>
+        <label for="newExerciseNameInput">Enter exercise name: </label>
+        <input class="sidebarInput" type="text" id="newExerciseNameInput" name="newExerciseNameInput"/>
+        <button class="button"id="createExercise">Create new exercise</button>
+        <br>
+        <label for="removeExerciseNameInput">Remove exercise name: </label>
+        <input class="sidebarInput" type="text" id="removeExerciseNameInput" name="removeExerciseNameInput"/>
+        <button class="button"id="removeExercise">Remove exercise</button>
+        <br>
+        <h3>Exercises: </h3>
+    </div>
+    <div id="pageInput"></div><!-- where each template is inserted -->
+
+    <template id="bodyweightTemplate"> <!-- BodyWeight Template -->
+        
+        <div class="pageContent">
+                <h1>Body Weight</h1>
+                <label for="DateInput">Enter the date: </label>
+                <input type="date" id="DateInput" name="DateInput"/>
+                <label for="BodyweightInput">Enter your bodyweight in KG: </label>
+                <input type="number" id="BodyweightInput" name="BodyweightInput"/>
+                <button class="button" id="SubmitBodyweightInput">Submit</button>
+                <button class="button"id="Remove">removeItems</button>
+            <br>
+
+            <label for="weightChangeInput">Enter your desired weekly weight change (kg): </label>
+            <select id="weightChangeInput" name="weightChangeInput">
+                <option value="-1">-1 KG</option>
+                <option value="-0.8">-0.8 KG</option>
+                <option value="-0.6">-0.6 KG</option>
+                <option value="-0.4">-0.4 KG</option>
+                <option value="-0.2">-0.2 KG</option>
+                <option value="0">0 KG</option>
+                <option value="0.2">+0.2 KG</option>
+                <option value="0.4">+0.4 KG</option>
+                <option value="0.6">+0.6 KG</option>
+                <option value="0.8">+0.8 KG</option>
+                <option value="1">+1 KG</option>
+            </select>
+            <button class="button" id="applyWeightChange">Apply</button>
+            <br>
+            <p id="weeklyAverage"></p>
+            <p id="calorieAdjustment"></p>
+            <div id="graphDisplay"></div>
+
+            <h2>Bodyweight log:</h2>
+            <p id="weightArray"></p>
+        </div>
+    </template>
+
+    <template id="exerciseTemplate"> <!-- exercise template -->
+        <div class="pageContent">
+            <h2 id="exerciseTitle"></h2>
+            <label for="exerciseDateInput">Enter the date: </label>
+            <input type="date" id="exerciseDateInput" name="exerciseDateInput"/>
+            <label for="exerciseWeightInput">Enter your exercise weight in KG:  </label>
+            <input type="number" id="exerciseWeightInput" name="exerciseWeightInput"/>
+            <button id="submitExerciseWeightInput">Submit</button>
+            <br>
+            <div id="graphDisplay"></div>
+
+            <h2>Exercise weight log:</h2>
+            <p id="exerciseWeightArray"></p>
+        </div>
+    </template>
+
+    <script src="Bodyweight.js" defer></script>
+    <script src="Navigation.js" defer></script>
+    <script src="ExerciseWeight.js" defer></script>
+</body>

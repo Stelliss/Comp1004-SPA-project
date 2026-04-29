@@ -1,0 +1,87 @@
+body 
+{ 
+    background: linear-gradient(0deg, rgb(54, 54, 54), rgb(105, 105, 105));
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#InputContainer
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#graphDisplay
+{
+    display: flex;
+    align-items: flex-end;
+    height: 100px;
+    border-left: 2px rgb(78, 78, 78);
+    border-right: 2px rgb(78, 78, 78);
+    padding: 10px;
+    gap: 10px;
+}
+
+.pageContent
+{
+    margin-left: 170px;
+    padding-left: 10px;
+}
+
+#sidebar
+{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 150px;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding: 10px;
+    background: linear-gradient(0deg, rgb(20, 20, 20), rgb(73, 73, 73));  
+    overflow-y: auto;
+    overflow-x: hidden;
+    border: 3px solid black;
+    color: rgb(204, 204, 204);
+}
+
+.sidebarInput
+{
+    width: 140px;
+}
+
+.bar
+{
+    overflow-y: auto;
+    overflow-x: hidden;
+    width: 40px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    text-align: center;
+    font-size: 10px;
+}
+
+.button
+{
+    color: rgb(0, 0, 0);
+    background-color: rgb(211, 211, 211);
+    transition: all 0.2s ease;
+}
+
+.exerciseButton
+{
+    color: rgb(0, 0, 0);
+    background-color: rgb(211, 211, 211);
+    transition: all 0.2s ease;
+}
+
+
+.button:hover
+{
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(255, 255, 255, 0.2);
+    transition: all 0.2s ease;
+}
